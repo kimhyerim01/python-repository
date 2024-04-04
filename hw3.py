@@ -1,18 +1,14 @@
-import sale as eSale
+import get_fixed_priced as fPrice
 
-sale2 = int(input('할인율은?'))
-r = won * 100/(100-sale2)
+sale_rate = int(input('할인률은?'))
+print('할인율은?',sale_rate)
+A_price = int(input('A 상품의 할인된 가격은?'))
+print('A 상품의 할인된 가격은?', A_price)
+B_price = int(input('B 상품의 할인된 가격은?'))
+print('B 상품의 할인된 가격은?', B_price)
 
-print('A상품의 할인된 가격은?', won)
-print('B상품의 할인된 가격은?', won)
-    
-def get_fixed_priced(r) :
-    print('A상품의 정가는', r, '원')
-    print('B상품의 정가는', r , '원')
-    return sale
-
-
-
+print('A 상품의 정가는?', fPrice.get_fixed_priced(sale_rate, A_price), '원')
+print('B 상품의 정가는?', fPrice.get_fixed_priced(sale_rate, B_price), '원')
 
     
     
